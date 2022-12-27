@@ -7,6 +7,8 @@ A new proposal for Ukrainian Latin with transliteration from Cyrillic.
 
 ## Usage
 
+Zero-dependency **1.5**kB (**765**B min + gz) NPM package:
+
 ```bash
 npm install ukraine-latin
 ```
