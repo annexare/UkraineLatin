@@ -22,6 +22,7 @@ test('Cyrillic to Latin', () => {
     "Dev'jatsot čotyry šistnadcjatyh",
   )
   assert.strictEqual(translit.toLatin('Борщ'), 'Boršč')
+  assert.strictEqual(translit.toLatin('Ґудзик ґедзь джміль'), "Ĝudzyk ĝedz' džmil'")
   assert.strictEqual(translit.toLatin('Лінь та лінь. Лінь'), "Lin' ta lin'. Lin'")
 })
 
@@ -38,5 +39,6 @@ test('Latin to Cyrillic', () => {
     "Дев'ятсот чотири шістнадцятих",
   )
   assert.strictEqual(translit.toCyrillic('Boršč'), 'Борщ')
+  assert.strictEqual(translit.toCyrillic("Ĝudzyk ĝedz' džmil'"), 'Ґудзик ґедзь джміль')
   assert.strictEqual(translit.toCyrillic("Lin' ta lin'. Lin'"), 'Лінь та лінь. Лінь')
 })
