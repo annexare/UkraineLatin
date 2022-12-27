@@ -1,0 +1,41 @@
+name: UkraineLatin Tests
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+
+jobs:
+  cypress:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node${{ matrix.node-version }}-${{ hashFiles('./package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node${{ matrix.node-version }}-${{ hashFiles('./package-lock.json') }}
+
+      - name: NPM install
+        run: npm ci --prefer-offline --no-audit --no-optional
+        env:
+          CI: true
+
+      - name: Tests
+        run: npm test
+        env:
+          CI: true
