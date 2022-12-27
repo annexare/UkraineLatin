@@ -1,2 +1,3 @@
-# UkraineLatin
-New proposed Ukrainian Latin transliteration from old Cyrillic.
+# Ukraine + Latin
+
+A new proposal for Ukrainian Latin with transliteration from Cyrillic.
