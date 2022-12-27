@@ -1,6 +1,6 @@
 {
   "name": "ukraine-latin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A new proposal for Ukrainian Latin with transliteration from Cyrillic",
   "main": "dist/index.js",
   "scripts": {
