@@ -1,0 +1,35 @@
+{
+  "name": "ukraine-latin",
+  "version": "0.1.0",
+  "description": "A new proposal for Ukrainian Latin transliteration from old Cyrillic",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "tsc --noEmit && node --loader tsx --test src/*.test.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annexare/UkraineLatin.git"
+  },
+  "keywords": [
+    "Ukraine",
+    "Ukrainian",
+    "Latin",
+    "Cyrillic",
+    "TypeScript"
+  ],
+  "author": "dmythro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/annexare/UkraineLatin/issues"
+  },
+  "homepage": "https://github.com/annexare/UkraineLatin#readme",
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "tsx": "3.12.1",
+    "typescript": "4.9.4"
+  }
+}
