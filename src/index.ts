@@ -99,7 +99,7 @@ export class UkraineLatinTranslit {
         result += latinChar
       } else if ((latinChar = this.cToL[char.toLowerCase()])) {
         // Maintain uppercase char
-        result += latinChar.toUpperCase()
+        result += titleCaseWord(latinChar)
       } else {
         // Leave non-cyrillic char as is
         result += char
